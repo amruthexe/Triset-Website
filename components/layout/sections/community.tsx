@@ -33,7 +33,7 @@ export const CommunitySection = () => {
             </CardContent>
 
             <CardFooter>
-            <Button asChild className="bg-orange-600 hover:bg-orange-700 text-white flex items-center space-x-2">
+            <Button asChild className="bg-red-600 hover:bg-red-700 text-white flex items-center space-x-2">
                 <Link
                   href="https://wa.me/+919848814614?text=I%20am%20interested%20in%20your%20digital%20services."
                   target="_blank"

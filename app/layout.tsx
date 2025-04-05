@@ -7,7 +7,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-import Image from "next/image"; // Import the Image component
+import { FaPhoneAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa"; // <-- Added icons
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,8 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-{/*          
-          <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white mb-4 text-center">
+          {/* <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white mb-4 text-center">
             <p className="font-semibold text-lg">
               Introducing Triset Soluatioins - Premium Websites And modern Apps We BUILD
             </p>
@@ -42,22 +41,33 @@ export default function RootLayout({
 
           {children}
 
-          {/* WhatsApp Button */}
-          <Link
-            href="https://wa.me/+919848814614?text=I%20am%20interested%20in%20your%20digital%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="fixed bottom-8 right-8 md:bottom-4 sm:right-4 md:right-4 cursor-pointer animate-blink">
-              <Image
-                src="/wa.png"
-                alt="WhatsApp"
-                width={64} // Set width for mobile
-                height={64} // Set height for mobile
-                className="transition-all duration-300 transform hover:scale-110"
-              />
-            </div>
-          </Link>
+          {/* Contact Icons - Call, Email, WhatsApp */}
+          <div className="fixed bottom-8 right-8 md:bottom-4 md:right-4 flex flex-col gap-3 items-center z-50">
+            {/* Call Icon */}
+            <Link href="tel:+919848814614">
+              <div className="bg-red-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all">
+                <FaPhoneAlt size={20} />
+              </div>
+            </Link>
+
+            {/* Email Icon */}
+            <Link href="mailto:admin@trisetsoluations.com">
+              <div className="bg-red-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all">
+                <FaEnvelope size={20} />
+              </div>
+            </Link>
+
+            {/* WhatsApp Icon */}
+            <Link
+              href="https://wa.me/919848814614?text=I%20am%20interested"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all animate-blink">
+                <FaWhatsapp size={20} />
+              </div>
+            </Link>
+          </div>
         </ThemeProvider>
       </body>
     </html>

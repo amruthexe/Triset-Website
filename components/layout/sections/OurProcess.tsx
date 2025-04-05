@@ -43,7 +43,7 @@ export default function ProcessSection() {
   return (
     <section className="py-24 bg-background">
       <div className="max-w-[1200px] mx-auto px-4">
-        <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+        <h2 className="text-lg font-bold text-primary text-center mb-2 tracking-wider">
           Our Process
         </h2>
 

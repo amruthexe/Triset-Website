@@ -8,7 +8,7 @@ export function DataEntryServices() {
     <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
       <GridItem
         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
-        icon={<FileText className="h-6 w-6 text-orange-500" />}
+        icon={<FileText className="h-6 w-6 text-red-500" />}
         title="Data Entry Services"
         description="Accurate and efficient data entry solutions tailored to your specific business needs."
       />

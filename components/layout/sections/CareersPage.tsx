@@ -7,7 +7,7 @@ interface FormData {
   lastName: string;
   email: string;
   phone: string;
-  resume: File | null; // Explicitly typed as File | null
+  resume: File | null;
   message: string;
 }
 
@@ -36,7 +36,6 @@ export default function CareersPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Prepare the form data
     const form = new FormData();
     form.append("firstName", formData.firstName);
     form.append("lastName", formData.lastName);
@@ -45,7 +44,6 @@ export default function CareersPage() {
     form.append("message", formData.message);
     if (formData.resume) form.append("resume", formData.resume);
 
-    // Post the form data to Getform
     try {
       const response = await fetch("https://getform.io/f/agdpozlb", {
         method: "POST",
@@ -77,56 +75,58 @@ export default function CareersPage() {
       {success && <p className="text-green-500 mb-4">{success}</p>}
       {error && <p className="text-red-500 mb-4">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block mb-1">First Name</label>
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-            placeholder="Enter First Name"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block mb-1">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+              placeholder="Enter First Name"
+              className="w-full p-2 border border-gray-300 rounded"
+            />
+          </div>
+          <div>
+            <label className="block mb-1">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+              placeholder="Enter Last Name"
+              className="w-full p-2 border border-gray-300 rounded"
+            />
+          </div>
         </div>
 
-        <div>
-          <label className="block mb-1">Last Name</label>
-          <input
-            type="text"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-            placeholder="Enter Last Name"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
-
-        <div>
-          <label className="block mb-1">Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            placeholder="Enter Email"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
-
-        <div>
-          <label className="block mb-1">Phone</label>
-          <input
-            type="text"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            placeholder="Enter Phone Number"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              placeholder="Enter Email"
+              className="w-full p-2 border border-gray-300 rounded"
+            />
+          </div>
+          <div>
+            <label className="block mb-1">Phone</label>
+            <input
+              type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              placeholder="Enter Phone Number"
+              className="w-full p-2 border border-gray-300 rounded"
+            />
+          </div>
         </div>
 
         <div>
@@ -146,14 +146,18 @@ export default function CareersPage() {
             value={formData.message}
             onChange={handleChange}
             required
-            placeholder="Enter your message"
-            className="w-full p-2 border border-gray-300 rounded"
+            placeholder="Write your message here..."
+            className="w-full p-2 border border-gray-300 rounded h-32"
           />
         </div>
 
-        <button type="submit" className="w-full p-3 bg-blue-500 text-white rounded hover:bg-blue-600">
-          Submit Application
-        </button>
+        <button
+  type="submit"
+  className="w-full p-3 bg-primary text-primary-foreground rounded hover:opacity-90 transition-all"
+>
+  Submit Application
+</button>
+
       </form>
     </div>
   );

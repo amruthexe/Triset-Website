@@ -13,6 +13,7 @@ import  OurProcess  from "@/components/layout/sections/OurProcess";
 import { PricingSection } from "@/components/layout/sections/pricing";
 import { ServicesSection } from "@/components/layout/sections/services";
 import { SponsorsSection } from "@/components/layout/sections/sponsors";
+import TeamSection from "@/components/layout/sections/TeamSection";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 import { FeaturesSectionDemo1 } from "@/components/layout/sections/youtube";
 
@@ -55,9 +56,11 @@ export default function Home() {
       <PricingSection />
       <OurProcess/>
       < FeaturesSectionDemo1/>
+      <TeamSection/>
       <TestimonialSection />
       <ContactSection />
       <FAQSection />
+     
       <FeaturesSectionDemo/>
       <CommunitySection />
      <AboutUs/>

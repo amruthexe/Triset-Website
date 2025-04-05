@@ -17,7 +17,7 @@ export function TypewriterEffectSmoothDemo() {
     },
     {
       text: "Aceternity.",
-      className: "text-orange-700 dark:text-orange-700",
+      className: "text-red-700 dark:text-red-700",
     },
   ];
   return (

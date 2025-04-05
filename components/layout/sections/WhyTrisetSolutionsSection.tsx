@@ -19,7 +19,7 @@ export const WhyTrisetSolutionsSection = () => {
     <section id="why-triset-solutions" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-3xl font-bold text-orange-700 dark:text-orange-700">
+          <h2 className="text-3xl font-bold text-red-700 dark:text-red-700">
             Why Triset Solutions?
           </h2>
           <p className="text-lg text-muted-foreground mt-4">
@@ -59,7 +59,7 @@ const StatCard = ({ number, label }: StatsProps) => {
   return (
     <div className="relative p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-white dark:bg-card ">
       <div className="flex items-center justify-center space-x-4">
-        <span className="text-5xl font-semibold text-orange-700 dark:text-orange-700">
+        <span className="text-5xl font-semibold text-red-700 dark:text-red-700">
           {currentValue}
         </span>
         <span className="text-xl font-medium text-muted-foreground">{label}</span>

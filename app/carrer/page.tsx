@@ -18,12 +18,14 @@ const page = () => {
         </h2>
       </div>
       <div className="px-30 md:px-16"> {/* Added more padding around the form */}
+      <JobsPage/>
+  
+      </div>
       <Wrapper className="py-20 relative">
         <CareersPage />
         </Wrapper>
-      </div>
 
-      <JobsPage/>
+   
      
       <StepsSectionCareers />
       <WhyTrisetSolutionsSection />

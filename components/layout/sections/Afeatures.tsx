@@ -65,7 +65,7 @@ export default function FeaturesSectionDemo() {
   return (
     <>
     <div className="text-center mb-8">
-        <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+        <h2 className="text-lg text-primary font-bold text-center mb-2 tracking-wider">
           New
         </h2>
 
@@ -102,9 +102,9 @@ const Feature = ({
       )}
     >
       {index < 4 ? (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-orange-100 dark:from-orange-800 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-red-100 dark:from-red-800 to-transparent pointer-events-none" />
       ) : (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-orange-100 dark:from-orange-800 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-red-100 dark:from-red-800 to-transparent pointer-events-none" />
       )}
       <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
         {icon}

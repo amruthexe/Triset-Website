@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { Briefcase, Code, Laptop } from "lucide-react"; // Icons for job roles
+import { ArrowBigDown, Briefcase, Code, Laptop } from "lucide-react"; // Icons for job roles
 import Link from "next/link"; // Import the Link component from Next.js
 
 export default function JobsPage() {
   const jobOpenings = [
     {
       title: "App Developer (React)",
-      icon: <Laptop className="h-6 w-6 text-orange-500" />,
+      icon: <Laptop className="h-6 w-6 text-red-500" />,
       description:
         "As an App Developer (React), you'll build dynamic web apps with React.js, ensuring they are scalable, high-performance, and user-friendly. You'll collaborate closely with our design team to create seamless UIs.",
       responsibilities: [
@@ -48,9 +48,9 @@ export default function JobsPage() {
   ];
 
   return (
-    <section id="careers" className="bg-white dark:bg-background text-black dark:text-white py-12 sm:py-24">
+    <section id="career" className="bg-white dark:bg-background text-black dark:text-white py-12 sm:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-xl md:text-xl  mb-4 text-center text-orange-500">
+        <h2 className="text-xl md:text-xl  mb-4 text-center text-red-500">
           Current Openings
         </h2>
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
@@ -73,11 +73,11 @@ export default function JobsPage() {
                 ))}
               </ul>
               <Link
-                href="/careers"
+                href="/carrer"
                 passHref
-                className="mt-4 inline-block py-2 px-6 bg-orange-500 text-white rounded-lg text-center w-full hover:bg-orange-600 transition"
+                className="mt-4 inline-block py-2 px-6 bg-red-500 text-white rounded-lg text-center w-full hover:bg-red-600 transition"
               >
-                Apply Now
+                Apply Below <ArrowBigDown className="inline"/>
               </Link>
             </div>
           ))}

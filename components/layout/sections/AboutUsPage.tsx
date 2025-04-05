@@ -8,7 +8,7 @@ export default function AboutUsPage() {
     <section id="about-us" className="bg-white dark:bg-black text-black dark:text-white py-12 sm:py-24">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-orange-500">About TriSet Agency</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-red-500">About TriSet Agency</h2>
           <h3 className="text-xl text-muted-foreground mb-6">
             Innovating IT Solutions for a Digital Future
           </h3>
@@ -36,19 +36,19 @@ export default function AboutUsPage() {
               <h4 className="text-2xl font-semibold mb-4">Our Services</h4>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-orange-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mr-3" />
                   Web Development: Creating dynamic, responsive websites that captivate users and drive engagement.
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-orange-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mr-3" />
                   Mobile App Development: Building cross-platform mobile applications that scale with your business needs.
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-orange-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mr-3" />
                   Data Entry: Streamlining data management and entry tasks for better efficiency.
                 </li>
                 <li className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-orange-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mr-3" />
                   Digital Marketing: Helping businesses grow by leveraging effective digital marketing strategies.
                 </li>
               </ul>
