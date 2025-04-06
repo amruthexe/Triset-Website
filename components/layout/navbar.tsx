@@ -1,5 +1,5 @@
 "use client";
-import { ChevronsDown, Github, Menu, Code, Smartphone, ShoppingCart, BarChart, Database, ArrowRight, PhoneCall } from "lucide-react";  // Import icons
+import { ChevronsDown, Github, Menu, Code, Smartphone, ShoppingCart, BarChart, Database, ArrowRight, PhoneCall, Camera } from "lucide-react";  // Import icons
 import React from "react";
 import {
   Sheet,
@@ -53,6 +53,10 @@ const routeList: RouteProps[] = [
     href: "/carrer",
     label: "Carrers",
   },
+  {
+    href: "/industry",
+    label: "Industries",
+  },
 ];
 
 // Updated service list with titles, hrefs, and icons
@@ -60,38 +64,50 @@ const serviceList: ServiceProps[] = [
   {
     title: "WEB DEVELOPMENT",
     href: "/web",
-    icon: Code,  // Using the 'Code' icon for Web Development
+    icon: Code,
   },
   {
     title: "APP DEVELOPMENT",
     href: "/apps",
-    icon: Smartphone,  // Using the 'Smartphone' icon for App Development
+    icon: Smartphone,
   },
   {
     title: "E-COMMERCE",
     href: "/ecom",
-    icon: ShoppingCart,  // Using the 'ShoppingCart' icon for E-Commerce
+    icon: ShoppingCart,
   },
   {
     title: "DIGITAL MARKETING",
     href: "/digital",
-    icon: BarChart,  // Using the 'BarChart' icon for Digital Marketing
+    icon: BarChart,
   },
   {
     title: "DATA ENTRY",
     href: "/data",
-    icon: Database,  // Using the 'Database' icon for Data Entry
+    icon: Database,
+  },
+  {
+    title: "PHOTOGRAMMETRY",
+    href: "/photo",
+    icon: Camera, // You can change this icon later
   },
 ];
+
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
-        <ChevronsDown  className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-        Triset
-      </Link>
+  <Image
+    src="/logo.webp"  // Path to your logo in the public folder
+    alt="Triset Logo"
+    width={100} // Adjust width as needed
+    height={100} // Adjust height as needed
+    className="rounded-lg mr-2" // Optional class for styling
+  />
+</Link>
+
       
       {/* Mobile Navbar */}
       <div className="flex items-center lg:hidden">

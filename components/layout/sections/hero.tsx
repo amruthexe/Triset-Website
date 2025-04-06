@@ -34,18 +34,18 @@ export const HeroSection = () => {
   return (
     <section className="container w-full pt-6 lg:pt-10">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto pb-10">
-        {/* === Carousel First === */}
-        <div className="relative w-full max-w-6xl overflow-hidden rounded-xl shadow-md">
+        {/* === Carousel First (hidden on mobile) === */}
+        <div className="hidden md:block relative w-full max-w-6xl overflow-hidden rounded-xl shadow-md">
           {/* Arrows only on md+ screens */}
           <button
             onClick={handlePrev}
-            className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition"
           >
             <ChevronLeft className="w-6 h-6 text-red-600" />
           </button>
           <button
             onClick={handleNext}
-            className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition"
           >
             <ChevronRight className="w-6 h-6 text-red-600" />
           </button>
@@ -55,7 +55,7 @@ export const HeroSection = () => {
             {slides.map((src, index) => (
               <div
                 key={index}
-                className={`absolute  top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
                   index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
                 }`}
               >

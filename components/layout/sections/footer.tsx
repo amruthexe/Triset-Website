@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
-import { ChevronsDownIcon } from "lucide-react";
+
+import Image from "next/image";
 import Link from "next/link";
 
 export const FooterSection = () => {
@@ -8,11 +9,18 @@ export const FooterSection = () => {
       <div className="p-10 bg-card border border-secondary rounded-2xl">
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
-            <Link href="#" className="flex font-bold items-center">
-              <ChevronsDownIcon className="w-9 h-9 mr-2 bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg border border-secondary" />
+            <Link href="/" className="font-bold text-lg flex items-center">
+  <Image
+    src="/logo.webp"  // Path to your logo in the public folder
+    alt="Triset Logo"
+    width={200} // Increased width
+    height={200} // Increased height
+    className="rounded-lg mt-8 ml-8 mr-2" // Optional class for styling
+  />
+</Link>
 
-              <h3 className="text-2xl">Triset</h3>
-            </Link>
+
+          
           </div>
 
           <div className="flex flex-col gap-2">

@@ -60,8 +60,8 @@ export default function Home() {
       <TestimonialSection />
       <ContactSection />
       <FAQSection />
-     
-      <FeaturesSectionDemo/>
+{/*      
+      <FeaturesSectionDemo/> */}
       <CommunitySection />
      <AboutUs/>
      <Wrapper className="py-20 relative">

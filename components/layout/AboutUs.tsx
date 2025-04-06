@@ -10,7 +10,7 @@ export const AboutUs = () => {
           <div className="flex-1 flex justify-center md:justify-start">
             <div className="w-full md:w-[400px] h-auto rounded-tl-lg rounded-bl-lg overflow-hidden">
               <Image
-                src="https://plus.unsplash.com/premium_photo-1675198764235-2dc2b37146c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with your image URL
+                src="/final_slide1.svg"
                 alt="Triset Solutions Office"
                 width={400}
                 height={400}
